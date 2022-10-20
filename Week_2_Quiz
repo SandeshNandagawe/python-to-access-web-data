@@ -1,0 +1,28 @@
+import re
+# 1.
+# Question 1
+# Which of the following regular expressions would extract 'uct.ac.za' from this string using re.findall?
+sentence = "From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008"
+domain = re.findall("@(\S+)", sentence)
+print(domain)
+
+# 2.
+# Question 2
+# What will the '\$' regular expression match?
+text = "Sande$h Nandagawe 99$"
+print(re.findall("\$",text))
+
+# 7.
+# Question 7
+# What does the "[0-9]+" match in a regular expression?
+print(re.findall("[a-z0-9SN]",text))
+
+# 8.
+# Question 8
+# What does the following Python sequence print out?
+x = 'From: Using the : character'
+y = re.findall('^F.+:', x)
+print(y)
+
+# 10.What would the regular expression '\S+?@\S+' match?
+print(re.findall("\S+?@\S+", sentence))
